@@ -7,12 +7,12 @@ const main = document.getElementById("main");
 addTaskBtn.addEventListener("click", function (event) {
   event.preventDefault(); // L'ho inserito per evitare comportamenti del form di base
 
-  const taskList = document.createElement("ul"); // Corrisponde alla lista non ordinata in cui inserirò le tasks
+  const taskContainer = document.createElement("div"); // Corrisponde alla lista non ordinata in cui inserirò le tasks
   const taskText = taskInput.value;
   if (taskText === "") {
     alert("Devi inserire un task");
   } else {
-    const taskElement = document.createElement("li");
+    const taskElement = document.createElement("p");
     taskElement.classList.add("task");
     taskElement.innerHTML = `
         <span>${taskText}</span>
@@ -27,14 +27,14 @@ addTaskBtn.addEventListener("click", function (event) {
         taskElement.style.textDecoration = "line-through";
       }
     });
-    taskList.appendChild(taskElement);
+    taskContainer.appendChild(taskElement);
 
-    const deleteBtn = taskList.querySelector(".deleteBtn");
+    const deleteBtn = taskContainer.querySelector(".deleteBtn");
     deleteBtn.addEventListener("click", function () {
-      taskList.remove();
+      taskContainer.remove();
     });
 
-    main.appendChild(taskList);
+    main.appendChild(taskContainer);
   }
 
   taskInput.value = "";
