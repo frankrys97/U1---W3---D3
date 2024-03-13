@@ -15,26 +15,39 @@ addTaskBtn.addEventListener("click", function (event) {
     const taskElement = document.createElement("p");
     taskElement.classList.add("task");
     taskElement.innerHTML = `
-        <span>${taskText}</span>
-        <span>
-            <button class="deleteBtn"><i class="fas fa-trash-alt"></i></button>
-        </span>
-    `;
-    taskElement.addEventListener("click", function () {
-      if (taskElement.style.textDecoration === "line-through") {
-        taskElement.style.textDecoration = "none";
-      } else {
-        taskElement.style.textDecoration = "line-through";
-      }
-    });
-    taskContainer.appendChild(taskElement);
+    <span class="task-text">${taskText}</span>
+    <span class="completed-label">Completato</span>
+    <span>
+        <button class="deleteBtn"><i class="fas fa-trash-alt"></i></button>
+    </span>
+`;
 
-    const deleteBtn = taskContainer.querySelector(".deleteBtn");
-    deleteBtn.addEventListener("click", function () {
-      taskContainer.remove();
-    });
+const taskTextElement = taskElement.querySelector(".task-text");
+const completedLabel = taskElement.querySelector(".completed-label");
+completedLabel.style.fontWeight = "bold";
+completedLabel.style.color = "green";
+completedLabel.style.display = "none";
 
-    main.appendChild(taskContainer);
+taskElement.addEventListener("click", function () {
+  if (taskTextElement.classList.contains("completed")) { // Se in textElement è presente la classe completed
+    // quindi la classe dello span con COMPLETATO all'interno, allora fai le seguenti operazioni:
+    taskTextElement.classList.remove("completed"); // Rimuovi il completed
+    taskTextElement.style.textDecoration = "none"; // Togli qualsiasi segno dal testo
+    completedLabel.style.display = "none"; 
+  } else { // Altrimenti fammi tutto questo
+    taskTextElement.classList.add("completed"); // Aggiungilo
+    taskTextElement.style.textDecoration = "line-through";
+    completedLabel.style.display = "inline"
+  }
+});
+
+const deleteBtn = taskElement.querySelector(".deleteBtn");
+deleteBtn.addEventListener("click", function () {
+  taskContainer.remove();
+});
+
+taskContainer.appendChild(taskElement);
+main.appendChild(taskContainer);
   }
 
   taskInput.value = "";

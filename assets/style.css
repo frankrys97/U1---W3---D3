@@ -90,6 +90,7 @@ div {
   justify-content: space-between;
   align-items: center;
   height: 10px;
+  position: relative;
 }
 
 .task span {
@@ -118,4 +119,11 @@ div {
 
 .task:hover {
   background-color: #e9ecef;
+}
+
+.completed-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
