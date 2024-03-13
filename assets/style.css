@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: radial-gradient(
+    circle at -18.3% 31.7%,
+    #d5bfff 0,
+    #a79cff 25%,
+    #7178f5 50%,
+    #2157da 75%,
+    #003cc1 100%
+  );
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: "Rowdies", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.main-section {
+  max-width: 600px;
+  max-height: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  text-align: start;
+}
+
+#input {
+  width: 88%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f8f9fa;
+  margin-right: 3.5px;
+}
+
+#add {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-image: radial-gradient(
+    circle at -18.3% 31.7%,
+    #d5bfff 0,
+    #a79cff 25%,
+    #7178f5 50%,
+    #2157da 75%,
+    #003cc1 100%
+  );
+  color: #fff;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.task {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10px;
+}
+
+.task span {
+  font-weight: bold;
+}
+
+.deleteBtn {
+  background-image: radial-gradient(
+    circle at -18.3% 31.7%,
+    #ff9954 0,
+    #ff8c54 12.5%,
+    #ff7b52 25%,
+    #ff644d 37.5%,
+    #f94646 50%,
+    #ea1b40 62.5%,
+    #df0040 75%,
+    #d60043 87.5%,
+    #cf0049 100%
+  );
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task:hover {
+  background-color: #e9ecef;
+}

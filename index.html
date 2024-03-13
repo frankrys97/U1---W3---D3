@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>To-do List</title>
+  </head>
+  <body>
+    <header>
+      <h1>To-do List <i class="fas fa-check-double"></i></h1>
+    </header>
+
+    <main id="main">
+      <section class="main-section">
+        <form id="myForm">
+          <label for="input"></label>
+          <input id="input" type="text" placeholder="Add to do" />
+          <button id="add"><i class="fas fa-plus-square"></i></button>
+          <!-- Se avessimo voluto avere una situazione in cui l'input poteva essere inviato solo
+        quando si premeva il button e non premendo "Enter" avremmo dovuto mettere
+    il type del nostro button come button e non submit-->
+        </form>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
