@@ -7,7 +7,7 @@ const main = document.getElementById("main");
 addTaskBtn.addEventListener("click", function (event) {
   event.preventDefault(); // L'ho inserito per evitare comportamenti del form di base
 
-  const taskContainer = document.createElement("div"); // Corrisponde alla lista non ordinata in cui inserirò le tasks
+  const taskContainer = document.createElement("div"); // Corrisponde al div in cui inserirò le tasks
   const taskText = taskInput.value;
   if (taskText === "") {
     alert("Devi inserire un task");
