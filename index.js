@@ -9,7 +9,9 @@ addTaskBtn.addEventListener("click", function (event) {
 
   const taskList = document.createElement("ul"); // Corrisponde alla lista non ordinata in cui inserirò le tasks
   const taskText = taskInput.value;
-  if (taskText !== "") {
+  if (taskText === "") {
+    alert("Devi inserire un task");
+  } else {
     const taskElement = document.createElement("li");
     taskElement.classList.add("task");
     taskElement.innerHTML = `
