@@ -30,16 +30,20 @@ completedLabel.style.display = "none";
 
 taskElement.addEventListener("click", function () {
   if (taskTextElement.classList.contains("completed")) { // Se in textElement è presente la classe completed
-    // quindi la classe dello span con COMPLETATO all'interno, allora fai le seguenti operazioni:
+    // come classe di verifica, allora fai le seguenti operazioni:
     taskTextElement.classList.remove("completed"); // Rimuovi il completed
     taskTextElement.style.textDecoration = "none"; // Togli qualsiasi segno dal testo
     completedLabel.style.display = "none"; 
   } else { // Altrimenti fammi tutto questo
-    taskTextElement.classList.add("completed"); // Aggiungilo
+    taskTextElement.classList.add("completed"); // Aggiungimi la classe
     taskTextElement.style.textDecoration = "line-through";
     completedLabel.style.display = "inline"
   }
 });
+
+// Ho usato la classe completed per gestire il comportamento del completamento delle task
+// nel senso che in base alla presenza o meno della classe allora il testo esegue
+// un determinato comportamento
 
 const deleteBtn = taskElement.querySelector(".deleteBtn");
 deleteBtn.addEventListener("click", function () {
