@@ -56,12 +56,12 @@ div {
 #input {
   width: 88%;
   padding: 10px;
-  margin-bottom: 10px;
   border: 1px solid #ced4da;
   border-radius: 4px;
   font-size: 16px;
   background-color: #f8f9fa;
   margin-right: 3.5px;
+  height: 100%;
 }
 
 #add {
@@ -84,7 +84,6 @@ div {
 
 .task {
   padding: 10px;
-  margin-bottom: 10px;
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
