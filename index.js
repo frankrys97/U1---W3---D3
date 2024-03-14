@@ -39,6 +39,7 @@ taskElement.addEventListener("click", function () {
     taskTextElement.style.textDecoration = "line-through";
     completedLabel.style.display = "inline"
   }
+  // E' come se forzassimo il comportamente dell'if per andare nell'else
 });
 
 // Ho usato la classe completed per gestire il comportamento del completamento delle task
